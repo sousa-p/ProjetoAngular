@@ -10,7 +10,7 @@
   <!-- Menu Superior de Curso -->
   <ion-row>
     <ion-col size="12">
-      <ion-segment value="default">
+      <ion-segment value="default" (ionChange)="selecionarCard($event)">
         <ion-segment-button value="ds">
           <ion-label>Desenvolvimento de Sistemas</ion-label>
         </ion-segment-button>
@@ -25,131 +25,135 @@
   </ion-row>
 
   <!-- Conteúdo Desenvolvimento de Sistemas -->
-  <ion-row>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1681865289078-f8f5be873ae9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1682174407703-62568fdbe3ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1681664451000-f7f2845eb950?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-
+  <ng-container *ngIf="this.item_selecionado === 'ds'"> <!-- Não aparece na tela -->
+    <ion-row>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1681865289078-f8f5be873ae9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1682174407703-62568fdbe3ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1681664451000-f7f2845eb950?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ng-container>
   <!-- Conteúdo Informatica para Internet -->
-  <ion-row>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680615722182-443d96a3280d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680705188863-61a5d15468f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680705000300-737a139d6ef0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-
+    <ng-container *ngIf="this.item_selecionado === 'informatica_internet'">
+      <ion-row>
+        <ion-col size="4">
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680615722182-443d96a3280d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+            <ion-card-header>
+              <ion-card-title>Programação Mobile</ion-card-title>
+              <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680705188863-61a5d15468f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+            <ion-card-header>
+              <ion-card-title>Programação Mobile</ion-card-title>
+              <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680705000300-737a139d6ef0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+            <ion-card-header>
+              <ion-card-title>Programação Mobile</ion-card-title>
+              <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+  </ng-container>
   <!-- Conteúdo Química -->
-  <ion-row>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1679252836633-2ea49cc117d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1669567831796-64bab0a02b1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1668102439834-3e9430d1a039?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+  <ng-container *ngIf="this.item_selecionado === 'quimica'">
+    <ion-row>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1679252836633-2ea49cc117d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1669567831796-64bab0a02b1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1668102439834-3e9430d1a039?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ng-container>
 </ion-content>
