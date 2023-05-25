@@ -1,27 +1,30 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+body {
+  transition: .5s all ease;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+.calendario {
+  &__foto {
+    border-radius: 5px;
+  }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+  &__data {
+    font-size: 1.5rem;
+    color: #dc143c;
+  }
 
-  color: #8c8c8c;
+  &__dia-semana {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-  margin: 0;
-}
+  &__dia {
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s ease;
 
-#container a {
-  text-decoration: none;
+    &:hover {
+      color: var(--ion-color-light);
+      background-color: #dc143c;
+    }
+  }
 }

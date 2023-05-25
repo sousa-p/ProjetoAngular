@@ -1,159 +1,81 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Etec
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" [class.dark-theme]="this.darkTheme">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Calendario
+      </ion-title>
+      <ion-buttons slot="primary">
+        <ion-toggle ([(ngModel)])="darkTheme" (ionChange)="toogleTheme()"></ion-toggle>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content [fullscreen]="true">
-  <!-- Menu Superior de Curso -->
-  <ion-row>
-    <ion-col size="12">
-      <ion-segment value="default" (ionChange)="selecionarCard($event)">
-        <ion-segment-button value="ds">
-          <ion-label>Desenvolvimento de Sistemas</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="informatica_internet">
-          <ion-label>Informática para Internet</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="quimica">
-          <ion-label>Química</ion-label>
-        </ion-segment-button>
-      </ion-segment>
-    </ion-col>
-  </ion-row>
-
-  <!-- Conteúdo Desenvolvimento de Sistemas -->
-  <ng-container *ngIf="this.item_selecionado === 'ds'"> <!-- Não aparece na tela -->
-    <ion-row>
-      <ion-col size="4">
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1681865289078-f8f5be873ae9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-          <ion-card-header>
-            <ion-card-title>Programação Mobile</ion-card-title>
-            <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col size="4">
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1682174407703-62568fdbe3ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-          <ion-card-header>
-            <ion-card-title>Programação Mobile</ion-card-title>
-            <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col size="4">
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1681664451000-f7f2845eb950?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-          <ion-card-header>
-            <ion-card-title>Programação Mobile</ion-card-title>
-            <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ng-container>
-  <!-- Conteúdo Informatica para Internet -->
-    <ng-container *ngIf="this.item_selecionado === 'informatica_internet'">
+  <ion-row class="ion-justify-content-center calendario">
+    <ion-col size="11" sizeMd="8" sizeLg="5" class="ion-text-center">
       <ion-row>
-        <ion-col size="4">
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680615722182-443d96a3280d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-            <ion-card-header>
-              <ion-card-title>Programação Mobile</ion-card-title>
-              <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
-            </ion-card-header>
-          
-            <ion-card-content>
-              Here's a small text description for the card content. Nothing more, nothing less.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="4">
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680705188863-61a5d15468f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-            <ion-card-header>
-              <ion-card-title>Programação Mobile</ion-card-title>
-              <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
-            </ion-card-header>
-          
-            <ion-card-content>
-              Here's a small text description for the card content. Nothing more, nothing less.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="4">
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1680705000300-737a139d6ef0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-            <ion-card-header>
-              <ion-card-title>Programação Mobile</ion-card-title>
-              <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
-            </ion-card-header>
-          
-            <ion-card-content>
-              Here's a small text description for the card content. Nothing more, nothing less.
-            </ion-card-content>
-          </ion-card>
+        <ion-col size="12">
+          <img class="calendario__foto" src="{{ this.calendario.foto }}" alt="Background"/>
         </ion-col>
       </ion-row>
-  </ng-container>
-  <!-- Conteúdo Química -->
-  <ng-container *ngIf="this.item_selecionado === 'quimica'">
-    <ion-row>
-      <ion-col size="4">
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1679252836633-2ea49cc117d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-          <ion-card-header>
-            <ion-card-title>Programação Mobile</ion-card-title>
-            <ion-card-subtitle>Bootstrap && Ionic</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col size="4">
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1669567831796-64bab0a02b1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-          <ion-card-header>
-            <ion-card-title>Programação Mobile</ion-card-title>
-            <ion-card-subtitle>HTML && CSS</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col size="4">
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://images.unsplash.com/photo-1668102439834-3e9430d1a039?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-          <ion-card-header>
-            <ion-card-title>Programação Mobile</ion-card-title>
-            <ion-card-subtitle>JavaScript && TypeScript</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ng-container>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-label class="calendario__data">{{ this.calendario.mes }} - {{ this.calendario.ano }}</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ng-container *ngFor="let dia_semana of this.calendario.dias_da_semana">
+          <ion-col  class="calendario__dia-semana">
+            <ion-label>
+              {{ dia_semana }}
+            </ion-label>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+      <ion-row>
+        <ng-container *ngFor="let dia of this.calendario.primeira_semana">
+          <ion-col class="calendario__dia">
+            <ion-label>
+              {{ dia }}
+            </ion-label>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+      <ion-row>
+        <ng-container *ngFor="let dia of this.calendario.segunda_semana">
+          <ion-col class="calendario__dia">
+            <ion-label>
+              {{ dia }}
+            </ion-label>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+      <ion-row>
+        <ng-container *ngFor="let dia of this.calendario.terceira_semana">
+          <ion-col class="calendario__dia">
+            <ion-label>
+              {{ dia }}
+            </ion-label>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+      <ion-row>
+        <ng-container *ngFor="let dia of this.calendario.quarta_semana">
+          <ion-col class="calendario__dia">
+            <ion-label>
+              {{ dia }}
+            </ion-label>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+      <ion-row>
+        <ng-container *ngFor="let dia of this.calendario.quinta_semana">
+          <ion-col class="calendario__dia">
+            <ion-label>
+              {{ dia }}
+            </ion-label>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-content>
