@@ -16,6 +16,7 @@ export class HomePage {
     ano: 2023,
     foto: 'https://images.pexels.com/photos/5445574/pexels-photo-5445574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     dias_da_semana: ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab'],
+    // Dummy data
     primeira_semana: [30,1,2,3,4,5,6],
     segunda_semana: [7,8,9,10,11,12,13],
     terceira_semana: [14,15,16,17,18,19,20],
@@ -23,8 +24,9 @@ export class HomePage {
     quinta_semana: [28,29,30,31,1,2,3]
   }
 
-  darkTheme = false
+  darkTheme = (localStorage.getItem('darkTheme')) ? JSON.parse(localStorage.getItem('darkTheme')!) : false;
   toogleTheme () {
     this.darkTheme = !this.darkTheme;
+    localStorage.setItem('darkTheme', JSON.stringify(this.darkTheme));
   }
 }

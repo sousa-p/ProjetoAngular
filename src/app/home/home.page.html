@@ -5,7 +5,7 @@
         Calendario
       </ion-title>
       <ion-buttons slot="primary">
-        <ion-toggle ([(ngModel)])="darkTheme" (ionChange)="toogleTheme()"></ion-toggle>
+        <ion-toggle checked="{{this.darkTheme}}" (ionChange)="toogleTheme()"></ion-toggle>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
