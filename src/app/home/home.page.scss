@@ -1,30 +1,8 @@
-body {
-  transition: .5s all ease;
+.sobre {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
-.calendario {
-  &__foto {
-    border-radius: 5px;
-  }
-
-  &__data {
-    font-size: 1.5rem;
-    color: #dc143c;
-  }
-
-  &__dia-semana {
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  &__dia {
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all .2s ease;
-
-    &:hover {
-      color: var(--ion-color-light);
-      background-color: #dc143c;
-    }
-  }
+#seguindo {
+  --background: #93e9be !important;
 }

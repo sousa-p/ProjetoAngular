@@ -21,24 +21,101 @@ export class HomePage {
     idioma: 'Português',
     conta_criada_em: 'Janeiro 2020',
     foto_perfil: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-  }
+  };
 
   metricas_sociais = {
     curtidas: '41.8K',
-    seguidores: '853',
+    seguidores: 853,
     amigos: '250'
-  }
+  };
 
   postagens = [
     {
       perfil: {
-        nome: 'Juliana',
-        mencao_perfil: '@juliana',
-        foto: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
       },
       postagem: {
-        mensagem: 'Novas fotos de gatos',
-        foto: 'https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
+      },
+      postagem: {
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
+      },
+      postagem: {
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
+      },
+      postagem: {
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
+      },
+      postagem: {
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
+      },
+      postagem: {
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
+      },
+      postagem: {
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Idoso',
+        mencao_perfil: '@Idoso',
+        foto: null
+      },
+      postagem: {
+        mensagem: 'Eu. tEnho. Auzaime',
+        foto: 'https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       }
     },
     {
@@ -159,7 +236,7 @@ export class HomePage {
       },
       postagem: {
         mensagem: 'Não confie em tudo que lê na internet',
-        foto: 'https://images.pexels.com/photos/47453/pexels-photo-47453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        foto: 'https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       }
     },
     {
@@ -181,7 +258,7 @@ export class HomePage {
       },
       postagem: {
         mensagem: 'Por que não existem elevadores no Pólo Norte?',
-        foto: 'https://images.pexels.com/photos/6212265/pexels-photo-6212265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        foto: 'https://images.pexels.com/photos/343685/pexels-photo-343685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       }
     },
     {
@@ -225,8 +302,14 @@ export class HomePage {
         },
         postagem: {
           mensagem: 'Como manter uma rotina de estudos eficiente?',
-          foto: 'https://images.pexels.com/photos/5792692/pexels-photo-5792692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          foto: 'https://images.pexels.com/photos/16627028/pexels-photo-16627028/free-photo-of-cafe-da-manha-cafeina-cafe-copo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         }
       }    
-  ]
+  ];
+
+  seguindo: string = 'Seguindo';
+
+  seguir () {
+    this.seguindo = (this.seguindo == 'Seguindo') ? (this.metricas_sociais.seguidores += -1, 'Seguir') : (this.metricas_sociais.seguidores += 1, 'Seguindo');
+  }
 }
